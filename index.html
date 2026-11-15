@@ -789,5 +789,15 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
 }
 })();
 </script>
+  document.addEventListener('click', function(e){
+  var t = e.target.closest('[data-a]');
+  if(!t) return;
+  var k = (t.dataset.k || '').toLowerCase();
+  var txt = (t.textContent || '').toLowerCase();
+  if(k.indexOf('dog') !== -1 || txt.indexOf('dog') !== -1){
+    var a = new Audio('dog.mp3');
+    a.play();
+  }
+});
 </body>
 </html>
