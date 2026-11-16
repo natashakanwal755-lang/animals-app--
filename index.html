@@ -789,7 +789,8 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
 }
 })();
 </script>
-  document.addEventListener('click', function(e){
+<script>
+document.addEventListener('click', function(e){
   var t = e.target.closest('[data-a]');
   if(!t) return;
   var k = (t.dataset.k || '').toLowerCase();
@@ -799,5 +800,6 @@ if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.
     a.play();
   }
 });
+</script>
 </body>
 </html>
